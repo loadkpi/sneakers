@@ -12,6 +12,7 @@ before_script:
   - until sudo lsof -i:5672; do echo "Waiting for RabbitMQ to start..."; sleep 1; done
 rvm:
   - ruby-head
+  - "3.0"
   - "2.6.3"
   - "2.5.5"
   - "2.4.6"
