@@ -3,8 +3,11 @@ sudo: true
 language: ruby
 cache: bundler
 services:
-  - rabbitmq
   - redis-server
+addons:
+  apt:
+    packages:
+      - rabbitmq-server
 before_install:
   - gem install bundler
 before_script:
